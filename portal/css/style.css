@@ -1,0 +1,90 @@
+body {
+  font-size: 15px;
+}
+
+a {
+  color: grey;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.okvir {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.cards {
+  margin-top: 40px;
+}
+
+.cards img:hover {
+  opacity: 0.8;
+}
+
+.card-body ul {
+  margin-bottom: 20px;
+}
+
+.social a {
+  float: right;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.social a:hover {
+  color: grey;
+  border-bottom: 1px solid grey;
+}
+
+footer {
+  width: 100%;
+  background: #d9d9d9;
+}
+
+footer ul {
+  list-style: none;
+  margin: 20px auto;
+}
+
+footer li a:hover {
+  color: #000;
+}
+
+.infos li {
+  padding-top: 10px;
+}
+
+.modal {
+  margin: auto auto;
+}
+
+.modal h1 {
+  margin: 20px auto;
+}
+
+#logForm input {
+  width: 70%;
+  margin: 0px auto 20px auto;
+}
+
+#logForm input:focus {
+  background-color: #ccc;
+}
+
+#logForm label,
+#logForm p {
+  margin-left: 120px;
+}
+
+#prijavi {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.carousel {
+  margin: 0 auto;
+  height: 70%;
+  width: 80%;
+}

@@ -1,0 +1,75 @@
+body{
+	font-size: 15px;
+}
+
+h1{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 80px;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	color:grey;
+}
+
+a:hover{
+	color: #fff;
+}
+
+#logForm input{
+	width: 70%;
+	margin:0px auto 20px auto;
+}
+
+#logForm input:focus{
+	background-color: #ccc;
+}
+
+#logForm label,	#logForm p{
+	margin-left: 120px;
+
+}
+
+.okvir{
+	max-width: 1600px;
+	margin:0 auto;
+}
+.border-informacije{
+	padding: 30px;
+	height: 100%;
+	border:20px solid #eee;
+
+}
+
+.informacije li{
+	margin-top: 20px;
+}
+
+.informacije li a:hover{
+	color:grey;
+}
+
+
+footer{
+	width: 100%;
+	background: #d9d9d9;
+}
+
+footer ul{
+	list-style: none;
+	margin: 20px auto;
+}
+
+
+.infos li{
+	padding-top:10px;
+}
+
+.user
+
+
+

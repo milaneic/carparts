@@ -1,0 +1,173 @@
+<?php 
+include 'php/db.php';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/delovi.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<title>AutoDelovi | Pronadjite sve sto vam treba za vas auto</title>
+</head>
+<body>
+	<!-- Navigacija -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="">AutoDelovi</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarColor03">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Pocetna<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="delovi.html">Delovi</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="o-nama.html">O nama</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="kontakt.html">Kontakt</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav right">
+				<li class="nav-item">
+					<span></span>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-user"></i></a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href=""><i class="fas fa-shopping-cart"><span class="badge" style="color:red;">0</span></i></a>
+				</li>
+			</div>
+		</nav>
+
+		<!-- Login Modal -->
+		<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<h1>Login</h1>
+					<form id="logForm">
+						<label>Email:</label><br>
+						<input type="email" name="email" class="form-control" required=""><br>
+						<label>Password:</label><br>
+						<input type="password" name="password" class="form-control" required=""><br>
+						<input type="submit" name="submit" value="Login" class="btn-info form-control" id="prijavi"><br>
+						<p>Nemate jos nalog?  <a href="singup.html" class="btn-info">Prijavite se</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SearchBar -->
+	<form>
+		<div class="row marginT">
+			<div class="col-md-3"><h3><center> Pretrazite zeljeni deo:</center></h3></div>
+			<div class="col-md-7"><input type="text" name="search" class="form-control" placeholder="Unesite naziv trazenog dela..."></div>
+			<div class="col-md-2"><center><input type="submit" name="submitSearch" class="btn-info"></center></div>
+		</div>
+	</form>
+	<!-- Main page with products -->
+	<div class="row">
+		<!-- Filters for products -->
+		<div class="col-md-2">
+			<section class="product_category">
+				<h4>Kategorija delova:</h4>
+				<?php 
+				$query="SELECT DISTINCT naziv,id FROM a WHERE naziv IS NOT NULL ORDER BY id ASC";
+				$result=$connect->query($query);
+				if($result)
+				{
+
+				}else
+				{
+					echo '<script language="javascript">';
+  echo 'alert(message successfully sent)';  //not showing an alert box.
+  echo '</script>';
+}
+
+?>
+</section>
+</div>
+<!-- Products -->
+<div class="col-md-10">
+	<p>orem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mattis odio. Aenean a vehicula magna. Nunc ut tincidunt justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam iaculis arcu ultrices, tincidunt quam in, congue metus. Vivamus condimentum volutpat ipsum, quis posuere velit tempor quis. Duis mattis placerat ante vel dictum. Ut eget pharetra diam. Maecenas ac varius erat, a venenatis tellus. Phasellus sed rhoncus turpis, vel malesuada sapien. Vestibulum ac turpis id orci lobortis gravida. Nunc eu purus vitae lacus iaculis venenatis. Mauris ultrices nibh nec nibh malesuada lobortis. Nullam vitae ultricies tortor.
+
+		Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin sit amet mattis mi. Suspendisse vel massa ut leo sodales iaculis. Duis maximus, dui in mollis sollicitudin, mi eros blandit nulla, sed tincidunt enim mi sit amet quam. Pellentesque sed justo ac mi feugiat sodales. Duis congue hendrerit velit, eu cursus orci pulvinar eget. Phasellus sagittis convallis commodo. Duis eu libero enim. Phasellus posuere imperdiet felis eget ornare. Aenean vel blandit leo, id dignissim magna.
+
+		Morbi luctus sapien sed sagittis pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas sit amet mollis sem. Phasellus gravida venenatis porta. Quisque in tincidunt nulla, sit amet lobortis diam. Pellentesque laoreet ipsum magna, et facilisis turpis sollicitudin ut. Maecenas vulputate justo ac vehicula consequat. Fusce lobortis arcu odio, id varius eros mattis at. Etiam id molestie arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sapien arcu, sodales et urna ut, euismod iaculis turpis. Phasellus vehicula leo velit, at semper nisi maximus et.
+
+		Fusce suscipit imperdiet sapien, ac malesuada eros interdum eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros velit, pulvinar quis felis id, finibus elementum metus. Nam vel neque eget risus mollis laoreet vel in sem. Nulla viverra odio purus, id vestibulum metus consectetur in. Quisque accumsan lorem ac nunc hendrerit, vel vestibulum ligula aliquam. Maecenas iaculis tellus quis velit vehicula, vitae ornare arcu vestibulum. Ut pretium condimentum finibus.
+
+		In volutpat metus sit amet imperdiet elementum. Cras pellentesque arcu ac pulvinar egestas. Suspendisse ac dictum urna. Morbi urna tellus, rutrum id enim eget, ultrices ultricies dolor. Morbi fringilla faucibus ligula et faucibus. Nam in diam in metus congue tristique non sit amet felis. Mauris condimentum nulla id mauris lacinia ullamcorper. Phasellus in elit ut augue sodales euismod non vitae dolor. Sed mollis urna ac diam rhoncus congue. Nam sed porta dolor. Nunc sed nulla vehicula lacus pulvinar mattis. Nulla ac ornare nisi. Nam vulputate sapien euismod, mollis tortor et, pulvinar urna. Aenean sed dapibus quam. Vivamus tincidunt ut nibh ut dignissim.
+
+		Nulla elementum diam sit amet tortor maximus dapibus. Maecenas interdum leo posuere, faucibus risus non, ultrices libero. Aliquam ullamcorper erat non nunc sollicitudin, ut commodo odio ullamcorper. Integer ultrices et metus sed varius. Sed mauris quam, vehicula et nunc quis, convallis faucibus neque. Integer eu venenatis sapien. Sed bibendum volutpat urna, eu fermentum lacus ultricies eu. Duis vitae turpis.
+
+	Generated 6 paragraphs, 500 words, 3354 bytes of Lorem Ipsum</p>
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+	<div class="row okvir">
+		<div class="col-md-4"> <!-- 1 -->
+			<ul >
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Pocetna<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="delovi.html">Delovi</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="o-nama.html">O nama</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="kontakt.html">Kontakt</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-md-4"> <!-- 2 -->
+			<ul >
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Pocetna<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="delovi.html">Delovi</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="o-nama.html">O nama</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="kontakt.html">Kontakt</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-md-4"> <!-- 3 -->
+			<ul class="infos">
+				<li><span><b>Lokacija:</b> Ugrinovci bb 11200 Beograd</span></li>
+				<li><span><b>Telefon:</b> +381 11 452 248<br><b>Mobilni:</b> +381 64 970 90 42,<br>+381 64 970 90 43	</span></li>
+				<li><span><b>Mail:</b> info@autodelovi.rs</span></li>
+				<li><span><b>Radno vreme:</b><br>	
+					<b>Ponedeljak-Petak:</b> 7:00-20:00 <br>
+					<b>Subota </b> 7:00-15:00 <br>
+					<b>Nedelja:</b> Ne radimo</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="coryright">
+			<center><span id="godina">&copy</span></center>
+		</div>	
+	</footer>
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
